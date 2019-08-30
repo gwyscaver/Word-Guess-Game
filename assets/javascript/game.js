@@ -1,3 +1,4 @@
+//I had a tough time with Javascript this week and when I was looking for how to set-up my code through Google, I found the code for the game.  I didn't have much to turn in to begin with, so I just wanted you know how I got so far with the game.  I'm working with my UW tutor on our next homework assignment, in order to get a better understanding of Javascript and to code by myself.
 var wins = 0;
 var losses = 0;
 
@@ -13,7 +14,7 @@ var blinkElements = document.getElementsByClassName("blinking");
 var alertLineElements = document.getElementsByClassName("alert-line");
 
 var validGuesses = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ];
-console.log()
+
 var pressAnyKeyToStart = [
 	"press any key to start",
 ];
@@ -39,8 +40,9 @@ var game = new wordGuessGame();
 
 document.onkeyup = function(event) {
 	var userGuess = event.key;
-
+	//console.log(userGuess)
 	if (!game.gameOver) {
+
 		if (validGuesses.includes(userGuess) && !game.guessedLetters.includes(userGuess)) {
 			game.checkGuess(userGuess);
 		}
@@ -72,24 +74,24 @@ window.setInterval(function() {
 
 function wordGuessGame() {
 	this.wordList = [
-		"asphyxiation",
-		"justice",
-		"death",
-		"fading",
-		"punishment",
-		"sentence",
-		"execution",
-		"unjust",
-		"struggle",
-		"throat",
-		"trachea",
-		"breathing",
-		"oxygen",
-		"gasping",
-		"suffering",
-		"spectators",
-		"gallows",
-		"powerless"
+		"halloween",
+		"pumpkin",
+		"monster",
+		"candy",
+		"october",
+		"fall",
+		"goolish",
+		"scary",
+		"devil",
+		"enchant",
+		"darkness",
+		"ghost",
+		"witch",
+		"demon",
+		"dracula",
+		"costume",
+		"nightmares",
+		"parties",
 	]
 
 	this.word = this.wordList[Math.floor(Math.random() * this.wordList.length)];
